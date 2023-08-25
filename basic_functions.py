@@ -71,9 +71,9 @@ print()
 print("Greetings!")
 
 # Get the user's name and greet them
-name = input("What's your name? (type your name and hit enter): ")
-message = f"Hello {name.capitalize()}!"
-print(message)
+msg = input("What's your name? (type your name and hit enter): ").capitalize()
+message = f"Hello {msg.upper()}!"
+print(msg)
 print()
 logger.info(f"message = {message}")
 

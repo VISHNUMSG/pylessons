@@ -32,7 +32,7 @@ Writing expressions in Python is like writing formulas in Excel.
 from util_logger import setup_logger
 
 # setup the logger using the current file name (a built-in variable)
-logger, logname = setup_logger(__file__)
+lgr, ln = setup_logger(__file__)
 
 # ----------------- END INSTRUCTOR GENERATED CODE -----------------
 
@@ -42,8 +42,10 @@ logger, logname = setup_logger(__file__)
 #       and calculate the area of a rectangle (rectangle_area = rectangle_length * rectangle_width)
 triangle_base = 10
 triangle_height = 5
-num1 = 50
-num2 = 20
+rectangle_length = 10
+rectangle_width = 20
+v_num1 = 50
+v_num2 = 20
 float_num1 = 1.1
 float_num2 = 2.2
 float_num3 = 3.3
@@ -51,13 +53,21 @@ float_num3 = 3.3
 # Basic Arithmetic Operations
 triangle_area = triangle_base * triangle_height / 2
 total_sum = float_num1 + float_num2
-difference = num1 - num2
+v_difference = v_num1 - v_num2
+
+#Rectangle Area Calculation
+rectangle_area = rectangle_length * rectangle_width
 
 # Log Information
-logger.info(
+lgr.info(
     f"Given base={triangle_base} and height={triangle_height}, triangle area = {triangle_area}"
 )
-logger.info(
+
+lgr.info(
+    f"Given length={rectangle_length} and width={rectangle_width}, rectangle area = {rectangle_area}"
+)
+
+lgr.info(
     f"Given float_num1={float_num1} and float_num2={float_num2}, sum = {total_sum}"
 )
-logger.info(f"Given num1={num1} and num2={num2}, the difference = {difference}")
+lgr.info(f"Given num1={v_num1} and num2={v_num2}, the difference = {v_difference}")

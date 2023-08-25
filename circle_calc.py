@@ -40,10 +40,10 @@ pi = math.pi
 
 # get the radius from the user - input result is always a string
 # Use \n to add a blank new line to the terminal before we ask for input
-radius_string = input("\nEnter the radius of a circle: ")
+radius = float(input("\nEnter the radius of a circle: "))
 
 # convert the radius_string to a number
-radius = float(radius_string)
+#radius = float(radius_string)
 
 # calculate the area using the numeric value (not the string)
 area = pi * radius**2
@@ -57,7 +57,7 @@ logger.info("Eww... that's a lot of decimal places - tmi!")
 # Pass in 2 arguments to the round() function.
 #     The first argument is the value to round.
 #     The second argument is the number of decimal places (make it 2 not 12)
-area = round(area, 12)
+area = round(area, 2)
 
 # log the results
 logger.info(f"The area of a circle with radius {radius} is {area}.")
